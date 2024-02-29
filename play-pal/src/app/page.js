@@ -1,11 +1,12 @@
-
+import AuthForm from "./auth-form"
 
 export default function Home() {
   return (
     <main>
 
-      <h1>HELLO WORLD!</h1>
-    
+      <h1>PlayPal</h1>
+
+    <AuthForm />
 
 
     </main>
