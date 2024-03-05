@@ -1,15 +1,11 @@
-import AuthForm from "./auth-form"
+// import AuthForm from "./auth-form"
+import Homepage from "./HomePage/page"
 
 export default function Home() {
   return (
-    <main>
-
-      <h1>PlayPal</h1>
-
-    <AuthForm />
-
-
-    </main>
+    <>
+      <Homepage/>
+    </>
    
   )}
     
