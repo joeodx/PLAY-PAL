@@ -6,7 +6,7 @@ const Header = () => {
     <>
     
     <header className="order-double: solid border black p-5">
-      <div className="flex place-content-center ">
+      <div className="flex place-content-center text-xl ">
        <Link href="/">
         Play-Pal 
        </Link>
