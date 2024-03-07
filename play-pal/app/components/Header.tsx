@@ -1,16 +1,19 @@
 import React from "react";
 import Link from "next/link";
-import Profile from "./Profile";
+
 
 const Header = () => {
   return (
     <>
-      <header className="border-double: solid border black p-5">
+      <header className="flex-row border-double: solid border black p-1">
         <div className="flex place-content-center text-xl ">
           <Link href="/">Play-Pal</Link>
-          <div>
-            <Profile />
-          </div>
+          
+        </div>
+        <div className="flex place-content-right text-xl">
+          <Link href="/">
+            Profile
+          </Link>
         </div>
         <div>
           <p className="flex place-content-center">

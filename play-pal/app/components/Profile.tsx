@@ -1,7 +1,7 @@
-import React from "react";
+// import React from "react";
 
-const Profile = () => {
-  return <div className="border-double: solid border black">P</div>;
-};
+// const Profile = () => {
+//   return <div className="border-double: solid border black">P</div>;
+// };
 
-export default Profile;
+// export default Profile;
