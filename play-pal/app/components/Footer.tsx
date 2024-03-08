@@ -4,7 +4,8 @@ const Footer = () => {
   return (
     <footer className="fixed inset-x-0 bottom-0 order-double: solid border black p-5">
       <h1 className="flex place-content-center text-xl ">
-        dont copy write out website mofos
+      © Play-Pal 
+       All Rights Reserved
       </h1>
     </footer>
   );
