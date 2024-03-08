@@ -2,28 +2,26 @@ import React from "react";
 import Link from "next/link";
 
 
+
 const Header = () => {
   return (
-    <>
-      <header className="flex-row border-double: solid border black p-1">
-        <div className="flex place-content-center text-xl ">
+    <header className="flex flex-col items-center border-b-4 border-black ">
+      <div className="w-full flex justify-between items-center">
+        <div className="flex-1"></div> {/* Empty div for spacing */}
+        <div className="text-3xl flex-1 flex justify-center">
           <Link href="/">Play-Pal</Link>
-          
         </div>
-        <div className="flex place-content-right text-xl">
-          <Link href="/">
-            Profile
-          </Link>
+        <div className="text-xl flex-1 flex justify-end pr-4 pt-8">
+          <Link href="/profile">Profile</Link>
         </div>
-        <div>
-          <p className="flex place-content-center">
-            Tired of playing with yourself, now find others to play with.
-          </p>
-        </div>{" "}
-        {/* </header>Play-Pal</h1> */}
-      </header>
-    </>
+      </div>
+      <p className="w-full text-center">
+        Tired of playing with yourself, now find others to play with.
+      </p>
+    </header>
   );
 };
 
 export default Header;
+
+
