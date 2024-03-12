@@ -6,9 +6,9 @@ export default function Home() {
     <>
       <Header />
 
-      <h4 className="text-2xl text-center pt-10">
+      <h2 className="text-3xl text-center pt-10">
         Pick a game below! 
-      </h4>
+      </h2>
       <Footer />
     </>
   );
