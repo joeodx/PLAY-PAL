@@ -20,13 +20,13 @@ async function GameCard() {
   return (
     <>
       {data.map((img) => (
-        <Card key={img.id}>
+        <Card key={(img.id = 0)}>
           <CardTitle>{img.title}</CardTitle>
-          <CardDescription>Card Description</CardDescription>
+          <CardDescription>{img.url}</CardDescription>
           <CardContent>
             <p>Card Content</p>
           </CardContent>
-          {/* <Image /> */}
+          {/* <Image src={img.url} alt={img.title} width={500} height={500} /> */}
         </Card>
       ))}
     </>
