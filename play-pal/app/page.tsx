@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Header />
 
-      <h2 className="text-3xl text-center p-5">Pick a game below!</h2>
+      <h2 className="text-2xl text-center p-5">Pick a game below!</h2>
       <div className="grid-cols-3">
         <GameCard />
       </div>
