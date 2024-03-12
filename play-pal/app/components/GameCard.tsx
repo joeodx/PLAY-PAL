@@ -26,7 +26,7 @@ async function GameCard() {
           <CardContent>
             <p>Card Content</p>
           </CardContent>
-          {/* <Image src={img.url} alt={img.title} width={500} height={500} /> */}
+          <Image src={img.url} alt={img.title} width={500} height={500} />
         </Card>
       ))}
     </>
