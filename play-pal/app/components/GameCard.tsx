@@ -21,12 +21,12 @@ async function GameCard() {
     <>
       {data.map((img) => (
         <Card key={(img.id = 0)}>
-          <CardTitle>{img.title}</CardTitle>
+          <CardTitle className="pl-14">{img.title}</CardTitle>
           <CardDescription>{img.url}</CardDescription>
           <CardContent>
             <p>Card Content</p>
           </CardContent>
-          <Image src={img.url} alt={img.title} width={500} height={500} />
+          {/* <Image src={img.url} alt={img.title} width={500} height={500} /> */}
         </Card>
       ))}
     </>

@@ -8,7 +8,9 @@ export default function Home() {
       <Header />
 
       <h2 className="text-3xl text-center pt-10">Pick a game below!</h2>
-      <GameCard />
+      <div className="grid-cols-3">
+        <GameCard />
+      </div>
       <Footer />
     </>
   );
