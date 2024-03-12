@@ -12,7 +12,7 @@ const Header = () => {
           <Link href="/">Play-Pal</Link>
         </div>
         <div className="text-xl flex-1 flex justify-end pr-4 pt-8">
-          <Link href="/profile">Profile</Link>
+          <Link href="/">Profile</Link>
         </div>
       </div>
       <p className="w-full text-center">

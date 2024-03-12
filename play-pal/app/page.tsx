@@ -5,12 +5,10 @@ export default function Home() {
   return (
     <>
       <Header />
-      <p className="sm:pt-20">
-        Tired of playing with yourself, now find others to play with.
-      </p>
-      <h2 className="text-3xl">
-        Introducing..... PLAY-PAL, play with each other all night long
-      </h2>
+
+      <h4 className="text-2xl text-center pt-10">
+        Pick a game below! 
+      </h4>
       <Footer />
     </>
   );
