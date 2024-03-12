@@ -22,9 +22,9 @@ async function GameCard() {
       {data.map((img) => (
         <Card key={(img.id = 0)}>
           <CardTitle className="pl-14">{img.title}</CardTitle>
-          <CardDescription>{img.url}</CardDescription>
-          <CardContent>
-            <p>Card Content</p>
+          <CardDescription className="pl-14">{img.url}</CardDescription>
+          <CardContent className="pl-14">
+            <p>Online Mutiplayer Game</p>
           </CardContent>
           {/* <Image src={img.url} alt={img.title} width={500} height={500} /> */}
         </Card>
