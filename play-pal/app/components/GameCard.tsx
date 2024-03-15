@@ -31,8 +31,8 @@ const GameCard = () => {
     <>
     <div className="w-[50vw] align-items-center">
       {games.map((game) => (
-        <Card className="my-10 shadow-inner shadow-slate-900 " key={game.id}> {/* Use the game's id as a key for React's list rendering */}
-          <CardTitle className="pl-14 pt-4">{game.name}</CardTitle>
+        <Card className="my-10 shadow-inner shadow-slate-900" key={game.id}> {/* Use the game's id as a key for React's list rendering */}
+          <CardTitle className="pl-14 pt-3">{game.name}</CardTitle>
           {/* <CardDescription className="pl-14">{game.background_image}</CardDescription> */}
           <CardContent className="pl-14">
             <p>Online Multiplayer Game</p>

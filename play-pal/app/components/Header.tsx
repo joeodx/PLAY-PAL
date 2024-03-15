@@ -13,7 +13,7 @@ const Header = () => {
         <SlGameController />
           <Link className="border-2" href="/">Play-Pal</Link>
         </div>
-        <div className="text-xl flex-1 flex justify-end pr-4 pt-8">
+        <div className="text-xl flex-1 flex justify-end pr-6 pt-8">
           <Link href="/">Profile</Link>
         </div>
       </div>

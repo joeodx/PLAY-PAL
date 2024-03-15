@@ -8,7 +8,7 @@ export default function Home() {
     <div className="bg-slate-900">
       <Header />
 
-      <h2 className="text-2xl text-center p-5">Pick a game below!</h2>
+      <h2 className="text-2xl text-center p-1">Pick a game below!</h2>
       <div className="flex justify-center">
         <GameCard />
       </div>
