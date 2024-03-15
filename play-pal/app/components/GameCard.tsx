@@ -6,22 +6,23 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
+import getGames from "@/lib/getGames";
 
-interface img {
+interface gameData {
   id: number;
   title: string;
-  url: string;
+  background_image: string;
 }
 
 async function GameCard() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/photos");
-  const data: img[] = await res.json();
+  // const res = await fetch("https://jsonplaceholder.typicode.com/photos");
+  // const data: img[] = await res.json();
 
   return (
     <>
-      {data.map((img) => (
-        <Card key={(img.id = 0)}>
-          <CardTitle className="pl-14">{img.title}</CardTitle>
+      {data.map((getGames()) => (
+        <Card key={(gameData.id = 0)}>
+          <CardTitle className="pl-14">{gameData.title}</CardTitle>
           <CardDescription className="pl-14">{img.url}</CardDescription>
           <CardContent className="pl-14">
             <p>Online Mutiplayer Game</p>
