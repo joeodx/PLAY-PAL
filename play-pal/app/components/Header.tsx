@@ -15,7 +15,7 @@ const Header = () => {
           <Link href="/">Profile</Link>
         </div>
       </div>
-      <p className="w-full text-center">
+      <p className="w-full text-center pb-4">
         Tired of playing with yourself, now find others to play with.
       </p>
     </header>
