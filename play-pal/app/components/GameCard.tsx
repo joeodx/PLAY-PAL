@@ -1,4 +1,5 @@
-import React from "react";
+'use client' 
+import React, { useState, useEffect } from "react";
 import {
   Card,
   CardContent,
@@ -8,26 +9,35 @@ import {
 import Image from "next/image";
 import getGames from "@/lib/getGames";
 
-interface gameData {
+interface GameData {
   id: number;
-  title: string;
+  name: string;
   background_image: string;
 }
 
-async function GameCard() {
-  // const res = await fetch("https://jsonplaceholder.typicode.com/photos");
-  // const data: img[] = await res.json();
+const GameCard = () => {
+  const [games, setGames] = useState<GameData[]>([]); // Initialize state to hold your games
+
+  useEffect(() => {
+    const fetchGames = async () => {
+      const data = await getGames(); // Fetch your games using the `getGames` function
+      setGames(data); // Update the state with the fetched games
+    };
+
+    fetchGames();
+  }, []); // The empty array means this effect runs once after the initial render
 
   return (
     <>
-      {data.map((getGames()) => (
-        <Card key={(gameData.id = 0)}>
-          <CardTitle className="pl-14">{gameData.title}</CardTitle>
-          <CardDescription className="pl-14">{img.url}</CardDescription>
+      {games.map((game) => (
+        <Card key={game.id}> {/* Use the game's id as a key for React's list rendering */}
+          <CardTitle className="pl-14">{game.name}</CardTitle>
+          {/* <CardDescription className="pl-14">{game.background_image}</CardDescription> */}
           <CardContent className="pl-14">
-            <p>Online Mutiplayer Game</p>
+            <p>Online Multiplayer Game</p>
           </CardContent>
-          {/* <Image src={img.url} alt={img.title} width={500} height={500} /> */}
+          {/* Uncomment and correct the Image component usage as needed */}
+          <Image src={game.background_image} alt={game.name} width={500} height={500} layout="responsive" />
         </Card>
       ))}
     </>
