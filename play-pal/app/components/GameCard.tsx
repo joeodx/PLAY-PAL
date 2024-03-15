@@ -29,8 +29,9 @@ const GameCard = () => {
 
   return (
     <>
+    <div className="w-[50vw] align-items-center">
       {games.map((game) => (
-        <Card key={game.id}> {/* Use the game's id as a key for React's list rendering */}
+        <Card className="my-10" key={game.id}> {/* Use the game's id as a key for React's list rendering */}
           <CardTitle className="pl-14">{game.name}</CardTitle>
           {/* <CardDescription className="pl-14">{game.background_image}</CardDescription> */}
           <CardContent className="pl-14">
@@ -40,6 +41,7 @@ const GameCard = () => {
           <Image src={game.background_image} alt={game.name} width={500} height={500} layout="responsive" />
         </Card>
       ))}
+    </div>
     </>
   );
 }
