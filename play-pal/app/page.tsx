@@ -9,7 +9,7 @@ export default function Home() {
     <div className="bg-slate-900">
       <Header />
 
-      <div className="text-2xl text-center p-5 flex justify-center">
+      <div className="grid-cols-3 gap-4 text-2xl text-center p-5 flex justify-center">
         <ChooseGame />
       </div>
       <div className="flex justify-center ">
