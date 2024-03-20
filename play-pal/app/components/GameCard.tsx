@@ -15,6 +15,11 @@ interface GameData {
   background_image: string;
 }
 
+
+
+
+
+
 const GameCard = () => {
   const [games, setGames] = useState<GameData[]>([]); // Initialize state to hold your games
 
@@ -35,7 +40,7 @@ const GameCard = () => {
           <CardTitle className="pl-14 pt-3">{game.name}</CardTitle>
           {/* <CardDescription className="pl-14">{game.background_image}</CardDescription> */}
           <CardContent className="pl-14">
-            <p>Online Multiplayer Game</p>
+            <p></p>
           </CardContent>
           {/* Uncomment and correct the Image component usage as needed */}
           <Image src={game.background_image} alt={game.name} width={100} height={100} layout="responsive" />

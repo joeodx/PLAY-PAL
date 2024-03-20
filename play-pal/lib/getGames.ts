@@ -5,6 +5,8 @@ interface Game {
     name: string;
     background_image: string;
   }
+
+
   
   // This is a simplified example function to fetch games from RAWG.
   async function getGames(): Promise<Game[]> {
@@ -43,5 +45,5 @@ interface Game {
       
   }
   
-  export default getGames;
-  
+export default getGames
+ 
