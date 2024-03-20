@@ -29,16 +29,16 @@ const GameCard = () => {
 
   return (
     <>
-    <div className="w-[50vw] align-items-center">
+    <div className="md:grid grid-cols-3 sm:flex">
       {games.map((game) => (
-        <Card className="my-10 shadow-inner shadow-slate-900" key={game.id}> {/* Use the game's id as a key for React's list rendering */}
+        <Card className="m-5 shadow-inner max-w-300px shadow-slate-900" key={game.id}> {/* Use the game's id as a key for React's list rendering */}
           <CardTitle className="pl-14 pt-3">{game.name}</CardTitle>
           {/* <CardDescription className="pl-14">{game.background_image}</CardDescription> */}
           <CardContent className="pl-14">
             <p>Online Multiplayer Game</p>
           </CardContent>
           {/* Uncomment and correct the Image component usage as needed */}
-          <Image src={game.background_image} alt={game.name} width={500} height={500} layout="responsive" />
+          <Image src={game.background_image} alt={game.name} width={100} height={100} layout="responsive" />
         </Card>
       ))}
     </div>
