@@ -1,11 +1,18 @@
+import axios from "axios"
+
 // Define an interface for the game data you expect. This is a simple example;
 // you should adjust it according to the actual data structure returned by RAWG.
 interface Game {
     id: number;
     name: string;
     background_image: string;
+    genres: Genre[];
   }
 
+interface Genre {
+    id: number;
+    name: string;
+}
 
   
   // This is a simplified example function to fetch games from RAWG.
@@ -42,8 +49,25 @@ interface Game {
 
           
       }
-      
-  }
+    }
+
+
+const actionGenre ="action"
+
+async function filterGamesByGenre(): Promise<void> {
+    try {
+        const games = await getGames()
+
+        const actionGames = games.filter(game => game.genres.some(genre => genre.name.toLowerCase() === actionGenre.toLowerCase()))
+        console.log(`Games in the ${actionGenre} genre`)
+        actionGames.forEach(game => console.log(game.name))
+    }
+    catch (error) {
+        console.error("Error filtering games by genre", error);
+    }
+}
+
+filterGamesByGenre()
   
 export default getGames
  

@@ -19,18 +19,19 @@ interface Genre {
 const Header = () => {
   const [genres, setGenres] = useState<Genre[]>([]);
 
-  useEffect(() => {
-    const fetchGenres = async () => {
-      try {
-        const data = await getGenre();
-        setGenres(data);
-      } catch (error) {
-        console.error("Error fetching genres:", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchGenres = async () => {
+  //     try {
+  //       const data = await getGenre();
+  //       setGenres(data);
+  //       console.log(data)
+  //     } catch (error) {
+  //       console.error("Error fetching genres:", error);
+  //     }
+  //   };
 
-    fetchGenres();
-  }, []);
+  //   fetchGenres();
+  // }, []);
 
   return (
     <>
@@ -44,7 +45,13 @@ const Header = () => {
             </Link>
           </div>
           <div>
-            <DropdownMenu>
+            <ul>
+              {genres.map((genre) => (
+                 <li key={genre.id}>{genre.name}</li>
+              ))}
+             
+            </ul>
+            {/* <DropdownMenu>
               <DropdownMenuTrigger>Genres</DropdownMenuTrigger>
               <DropdownMenuContent>
                 {genres.map((genre) => (
@@ -53,7 +60,7 @@ const Header = () => {
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
-            </DropdownMenu>
+            </DropdownMenu> */}
           </div>
           <div className="text-xl flex-1 flex justify-end pr-6 pt-8">
             <Link href="/">Profile</Link>
