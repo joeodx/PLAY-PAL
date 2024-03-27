@@ -31,7 +31,6 @@ async function getGenre(): Promise<Genre[]> {
         // Assuming the data structure has a `results` array field based on RAWG's typical response.
         // Adjust this according to the actual structure.
         return data.results as Genre[];
-        
     } catch (error) {
         console.error("Failed to fetch games:", error);
         return [];
